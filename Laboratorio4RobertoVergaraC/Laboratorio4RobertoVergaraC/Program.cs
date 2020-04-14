@@ -19,10 +19,10 @@ namespace Laboratorio4RobertoVergaraC
             Assembly assembly = new Assembly();
             Check check = new Check();
             Packing packing = new Packing();
-            int contador = 1;
-            while (contador != 0)
+            int contador2 = 0;
+            while (true)
             {
-                Console.WriteLine("\n(a) Prender Máquinas\n(b) Apagar Máquinas \n(c) Iniciar funcionamiento (empezaran a circular objetos por las máquinas) \n(d)\n(e)\n(f)\n(g) \n(h) \n(i) \n(j) Salir del programa\n");
+                Console.WriteLine("\n(a) Prender Máquinas\n(b) Apagar Máquinas \n(c) Iniciar funcionamiento (empezaran a circular objetos por las máquinas) / Continuar funcionamiento \n(d) Iniciar funcionamiento denuevo desde '0' (Se borrará el funcionamiento que llevaba hasta ese momento) \n(e) Salir del programa\n");
                 string option = Console.ReadLine();
                 if (option == "a") 
                 {
@@ -36,29 +36,42 @@ namespace Laboratorio4RobertoVergaraC
                 }
                 else if (option == "c") 
                 {
-
+                    while (true)
+                    {
+                        if (computer.Status == "OFF") 
+                        {
+                            Console.WriteLine("No puede comenzar el funcionamiento ya que las m+aquinas están apagadas");
+                            break;
+                        }
+                        list.Add(contador2);
+                        reception.Restarting();
+                        storage.Restarting();
+                        assembly.Restarting();
+                        check.Restarting();
+                        packing.Restarting();
+                    }
                 }
                 else if (option == "d") 
                 {
+                    while (true)
+                    {
+                        if (computer.Status == "OFF")
+                        {
+                            Console.WriteLine("No puede comenzar el funcionamiento ya que las m+aquinas están apagadas");
+                            break;
+                        }
+                        else { list.Clear(); }
+                        list.Add(contador2);
+                        reception.Restarting();
+                        storage.Restarting();
+                        assembly.Restarting();
+                        check.Restarting();
+                        packing.Restarting();
+                    }
                 }
-                else if (option == "e") 
+                else if (option == "e") //Salir del programa
                 {
-                }
-                else if (option == "f") 
-                {
-                }
-                else if (option == "g") 
-                {
-                }
-                else if (option == "h") 
-                {
-                }
-                else if (option == "i") 
-                {
-                }
-                else if (option == "j") //Salir del programa
-                {
-                    contador = 0;
+                    break;
                 }
                 else
                 {

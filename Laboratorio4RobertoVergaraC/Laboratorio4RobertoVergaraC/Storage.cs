@@ -8,6 +8,7 @@ namespace Laboratorio4RobertoVergaraC
 {
     class Storage : Machines, IRestartingMemory
     {
+        private int Memory = 9;
         int counter = 0;
 
         public void Restarting()
@@ -17,9 +18,11 @@ namespace Laboratorio4RobertoVergaraC
 
         public override bool restart()
         {
+            counter++;
             if (counter == Memory)
             {
                 Restarting();
+                Console.WriteLine("La máquina de almacenamiento llegó a su capacidad máxima de memoria, por lo que se le reestablecerá");
                 return true;
             }
             return false;

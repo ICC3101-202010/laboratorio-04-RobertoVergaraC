@@ -8,7 +8,6 @@ namespace Laboratorio4RobertoVergaraC
 {
     public abstract class Machines
     {
-        protected int Memory = 10;
         public abstract string turnOn();
         public abstract string turnOff();
         public abstract bool restart();

@@ -31,15 +31,13 @@ namespace Laboratorio4RobertoVergaraC
         public void PowerON(Reception reception, Storage storage, Assembly assembly, Check check, Packing packing)
         {
             Console.WriteLine("Prendiendo máquina de recepción: " + reception.turnOn());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Prendiendo máquina de almacenamiento: " + storage.turnOn());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Prendiendo máquina de ensamblaje: " + assembly.turnOn());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Prendiendo máquina de verificación: " + check.turnOn());
-            Thread.Sleep(2000);
-            Console.WriteLine("Prendiendo máquina de verificación: " + check.turnOn());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Prendiendo máquina de empaque: " + packing.turnOn());
             Status = "ON";
         }
@@ -47,15 +45,13 @@ namespace Laboratorio4RobertoVergaraC
         public void PowerOFF(Reception reception, Storage storage, Assembly assembly, Check check, Packing packing)
         {
             Console.WriteLine("Apagando máquina de recepción: " + reception.turnOff());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Apagando máquina de almacenamiento: " + storage.turnOff());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Apagando máquina de ensamblaje: " + assembly.turnOff());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Apagando máquina de verificación: " + check.turnOff());
-            Thread.Sleep(2000);
-            Console.WriteLine("Apagando máquina de verificación: " + check.turnOff());
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             Console.WriteLine("Apagando máquina de empaque: " + packing.turnOff());
             Status = "OFF";
         }
