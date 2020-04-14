@@ -8,7 +8,7 @@ namespace Laboratorio4RobertoVergaraC
 {
     class Storage : Machines, IRestartingMemory
     {
-        private int Memory = 9;
+        private int Memory = 4;
         int counter = 0;
 
         public void Restarting()

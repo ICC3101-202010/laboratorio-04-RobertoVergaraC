@@ -8,7 +8,7 @@ namespace Laboratorio4RobertoVergaraC
 {
     class Reception : Machines, IRestartingMemory
     {
-        private int Memory = 8;
+        private int Memory = 3;
         int counter = 0;
 
         public void Restarting()

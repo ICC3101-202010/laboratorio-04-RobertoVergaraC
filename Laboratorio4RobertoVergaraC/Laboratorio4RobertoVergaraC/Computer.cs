@@ -9,7 +9,7 @@ namespace Laboratorio4RobertoVergaraC
 {
     class Computer : Machines
     {
-        private string status;
+        private string status = "OFF";
 
         public string Status { get => status; set => status = value; }
 

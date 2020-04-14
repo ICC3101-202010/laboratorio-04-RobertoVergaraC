@@ -8,7 +8,7 @@ namespace Laboratorio4RobertoVergaraC
 {
     class Assembly : Machines, IRestartingMemory
     {
-        private int Memory = 10;
+        private int Memory = 5;
         int counter = 0;
 
         public void Restarting()
